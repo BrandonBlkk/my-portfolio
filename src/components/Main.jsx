@@ -53,7 +53,7 @@ const Main = () => {
     }, []);
 
     return (
-        <div id='work' className="container mx-auto my-12">
+        <div id='work' className="container mx-auto my-10">
             <div className="mx-5">
                 <h2 className="text-4xl sm:text-5xl">The work I do</h2>
             </div>

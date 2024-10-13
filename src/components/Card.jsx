@@ -3,7 +3,7 @@ import { RiStackLine } from "react-icons/ri";
 
 const Card = ({ img, title, responsive, project, link, tech }) => {
     return (
-        <div className="hot-deal-box w-full mx-5 relative border-b-2 md:border-b-0 sm:w-80 group">
+        <div className="hot-deal-box w-full mx-5 relative border-b-2 border-slate-200 dark:border-slate-600 md:border-b-0 sm:w-80 group py-1">
             <div className="relative overflow-hidden">
                 <div className="hot-deal-img-container flex justify-center select-none border dark:border-none">
                     <img className="w-full h-full object-contain" src={img} alt={title} />

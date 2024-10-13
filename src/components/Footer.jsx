@@ -101,14 +101,14 @@ const Footer = () => {
                                 <div className="flex flex-col gap-2 sm:flex-row">
                                     <div className="flex flex-col w-full">
                                         <label for="name">Your Name:</label>
-                                        <input className="bg-transparent border border-slate-700 p-1 rounded" type="text" placeholder="Enter your name" required/>
+                                        <input className="bg-transparent border border-slate-700 p-2 rounded outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-50 transition duration-300 ease-in-out" type="text" placeholder="Enter your name" required/>
                                     </div>
                                     <div className="flex flex-col w-full">
                                         <label for="name">Your Email:</label>
-                                        <input className="bg-transparent border border-slate-700 p-1 rounded" type="text" placeholder="Enter your email" required/>
+                                        <input className="bg-transparent border border-slate-700 p-2 rounded outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-50 transition duration-300 ease-in-out" type="text" placeholder="Enter your email" required/>
                                     </div>
                                 </div>
-                                <textarea className="bg-transparent border border-slate-700 p-1 rounded w-full" name="" id="" cols="30" rows="10" placeholder="Your message..." required></textarea>
+                                <textarea className="bg-transparent border border-slate-700 p-1 rounded w-full outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-50 transition duration-300 ease-in-out" name="" id="" cols="30" rows="10" placeholder="Your message..." required></textarea>
                             </div>
                             <input className="bg-slate-700 p-2 mt-3 rounded hover:bg-slate-600 transition-colors duration-150" type="submit" value="Send Message"/>
                         </form>
