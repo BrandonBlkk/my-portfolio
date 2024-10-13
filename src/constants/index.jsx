@@ -107,7 +107,7 @@ export const items = [
         title: "Netflix clone with React JS",
         responsive: true,
         project: 'Own project',
-        link: '',
+        link: 'https://github.com/BrandonBlkk/Netflix-clone',
         tech: [
             <RiHtml5Line size={24} className='text-orange-500' />,
             <RiCss3Line size={24} className='text-blue-500' />,
