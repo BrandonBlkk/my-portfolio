@@ -6,7 +6,6 @@ import { CgDarkMode } from "react-icons/cg";
 const Header = () => {
     const [age, setAge] = useState(0);
     const [isMoon, setIsMoon] = useState(false);
-    const [scrollWidth, setScrollWidth] = useState(0);
 
     // Calculate age on mount
     useEffect(() => {
@@ -36,26 +35,8 @@ const Header = () => {
         localStorage.setItem('theme', newTheme);
     }
 
-    // Handle scroll progress bar
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollPercentage = (window.scrollY / scrollableHeight) * 100;
-            setScrollWidth(scrollPercentage);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
     return (
         <>
-            {/* Scroll Progress Bar */}
-            <div id="moveRightLoader" className="fixed top-0 w-full h-1 z-10">
-                <p id="move-right" className="absolute top-0 bg-blue-400 h-1" style={{ width: `${scrollWidth}%` }}></p>
-            </div>
-
             {/* Header Section */}
             <nav className="flex flex-col md:flex-row items-center justify-between gap-4 container mx-auto px-10 my-10 transition-colors duration-150">
                 <div className='flex flex-col sm:flex-row items-center gap-5'>
