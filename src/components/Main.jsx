@@ -107,6 +107,7 @@ const Main = () => {
                         responsive={item.responsive}
                         tech={item.tech}
                         link={item.link}
+                        code={item.code}
                     />
                 ))}
             </div>

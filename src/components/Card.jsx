@@ -1,7 +1,7 @@
 import React from 'react';
 import { RiStackLine } from "react-icons/ri";
 
-const Card = ({ img, title, responsive, project, link, tech }) => {
+const Card = ({ img, title, responsive, project, link, code, tech }) => {
     return (
         <div className="hot-deal-box w-full mx-5 relative border-b-2 border-slate-200 dark:border-slate-600 md:border-b-0 sm:w-80 group py-1">
             <div className="relative overflow-hidden">
@@ -10,10 +10,15 @@ const Card = ({ img, title, responsive, project, link, tech }) => {
                 </div>
 
                 {/* Button */}
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <a href={link} target="_blank" rel="noreferrer">
+                <div className="absolute inset-0 bg-black/40 flex flex-col gap-2 items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 select-none">
+                    <a href={link} className={link === '' && 'hidden'} target="_blank" rel="noreferrer">
                         <button className="px-6 py-2 bg-white text-blue-500 font-semibold rounded-md hover:bg-slate-50 transition-colors duration-200">
                             View Project
+                        </button>
+                    </a>
+                    <a href={code} target="_blank" rel="noreferrer">
+                        <button className="px-6 py-2 text-white font-semibold rounded-md transition-colors duration-200">
+                            View Code
                         </button>
                     </a>
                 </div>

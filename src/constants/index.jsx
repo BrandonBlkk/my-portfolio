@@ -9,6 +9,7 @@ export const items = [
         responsive: true,
         project: 'First year project',
         link: 'https://brandonblkk.github.io/Retail-Camping/index.html',
+        code: '',
         tech: [
             <RiHtml5Line size={24} className='text-orange-500' />,
             <RiCss3Line size={24} className='text-blue-500' />
@@ -21,7 +22,8 @@ export const items = [
         title: 'SMC(Social Media Campaigns) was built with HTML, CSS, JavaScript and PHP',
         responsive: true,
         project: 'Second year project',
-        link: 'https://github.com/BrandonBlkk/SMC-Social-Media-Campaigns-',
+        link: '',
+        code: 'https://github.com/BrandonBlkk/SMC-Social-Media-Campaigns-',
         tech: [
             <RiHtml5Line size={24} className='text-orange-500' />,
             <RiCss3Line size={24} className='text-blue-500' />,
@@ -37,6 +39,7 @@ export const items = [
         responsive: false,
         project: 'Own project',
         link: 'https://brandonblkk.github.io/Amberhill-Cafe/CoffeeWebsite.html',
+        code: '',
         tech: [
             <RiHtml5Line size={24} className='text-orange-500' />,
             <RiCss3Line size={24} className='text-blue-500' />
@@ -50,6 +53,7 @@ export const items = [
         responsive: false,
         project: 'Own project',
         link: 'https://brandonblkk.github.io/Spotify-Clone/SpotifyClone.html',
+        code: '',
         tech: [
             <RiHtml5Line size={24} className='text-orange-500' />,
             <RiCss3Line size={24} className='text-blue-500' />
@@ -63,6 +67,7 @@ export const items = [
         responsive: false,
         project: 'Own project',
         link: 'https://brandonblkk.github.io/Shopping-Website/TailwindCSS.html',
+        code: '',
         tech: [
             <RiHtml5Line size={24} className='text-orange-500' />,
             <RiCss3Line size={24} className='text-blue-500' />,
@@ -77,7 +82,8 @@ export const items = [
         title: "VELIRO men's clothing and accessories website with HTML, CSS, Tailwind CSS, JavaScript and PHP",
         responsive: true,
         project: 'Second year project',
-        link: 'https://github.com/BrandonBlkk/VELIRO',
+        link: '',
+        code: 'https://github.com/BrandonBlkk/VELIRO',
         tech: [
             <RiHtml5Line size={24} className='text-orange-500' />,
             <RiCss3Line size={24} className='text-blue-500' />,
@@ -94,6 +100,7 @@ export const items = [
         responsive: true,
         project: 'Inspiration project',
         link: 'https://brandonblkk.github.io/Weather-App/WeatherApp.html',
+        code: '',
         tech: [
             <RiHtml5Line size={24} className='text-orange-500' />,
             <RiCss3Line size={24} className='text-blue-500' />,
@@ -107,7 +114,8 @@ export const items = [
         title: "Netflix clone with React JS",
         responsive: true,
         project: 'Own project',
-        link: 'https://github.com/BrandonBlkk/Netflix-clone',
+        link: '',
+        code: 'https://github.com/BrandonBlkk/Netflix-clone',
         tech: [
             <RiHtml5Line size={24} className='text-orange-500' />,
             <RiCss3Line size={24} className='text-blue-500' />,
@@ -124,6 +132,7 @@ export const items = [
         responsive: true,
         project: 'Own project',
         link: 'https://brandonblkk.github.io/Gift/WillYouBeMyLover.html',
+        code: '',
         tech: [
             <RiHtml5Line size={24} className='text-orange-500' />,
             <RiCss3Line size={24} className='text-blue-500' />,
@@ -138,7 +147,8 @@ export const items = [
         title: "My travel website with React JS",
         responsive: true,
         project: 'Inspiration project',
-        link: 'https://github.com/BrandonBlkk/My-Travel',
+        link: '',
+        code: 'https://github.com/BrandonBlkk/My-Travel',
         tech: [
             <RiHtml5Line size={24} className='text-orange-500' />,
             <RiCss3Line size={24} className='text-blue-500' />,
