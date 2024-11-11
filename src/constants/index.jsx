@@ -9,7 +9,7 @@ export const items = [
         responsive: true,
         project: 'First year project',
         link: 'https://brandonblkk.github.io/Retail-Camping/index.html',
-        code: '',
+        code: 'https://github.com/BrandonBlkk/Retail-Camping',
         tech: [
             <RiHtml5Line size={24} className='text-orange-500' />,
             <RiCss3Line size={24} className='text-blue-500' />
@@ -39,7 +39,7 @@ export const items = [
         responsive: false,
         project: 'Own project',
         link: 'https://brandonblkk.github.io/Amberhill-Cafe/CoffeeWebsite.html',
-        code: '',
+        code: 'https://github.com/BrandonBlkk/Amberhill-Cafe',
         tech: [
             <RiHtml5Line size={24} className='text-orange-500' />,
             <RiCss3Line size={24} className='text-blue-500' />
@@ -53,7 +53,7 @@ export const items = [
         responsive: false,
         project: 'Own project',
         link: 'https://brandonblkk.github.io/Spotify-Clone/SpotifyClone.html',
-        code: '',
+        code: 'https://github.com/BrandonBlkk/Spotify-Clone?tab=readme-ov-file',
         tech: [
             <RiHtml5Line size={24} className='text-orange-500' />,
             <RiCss3Line size={24} className='text-blue-500' />
@@ -67,7 +67,7 @@ export const items = [
         responsive: false,
         project: 'Own project',
         link: 'https://brandonblkk.github.io/Shopping-Website/TailwindCSS.html',
-        code: '',
+        code: 'https://github.com/BrandonBlkk/Shopping-Website',
         tech: [
             <RiHtml5Line size={24} className='text-orange-500' />,
             <RiCss3Line size={24} className='text-blue-500' />,
@@ -100,7 +100,7 @@ export const items = [
         responsive: true,
         project: 'Inspiration project',
         link: 'https://brandonblkk.github.io/Weather-App/WeatherApp.html',
-        code: '',
+        code: 'https://github.com/BrandonBlkk/Weather-App',
         tech: [
             <RiHtml5Line size={24} className='text-orange-500' />,
             <RiCss3Line size={24} className='text-blue-500' />,
@@ -132,7 +132,7 @@ export const items = [
         responsive: true,
         project: 'Own project',
         link: 'https://brandonblkk.github.io/Gift/WillYouBeMyLover.html',
-        code: '',
+        code: 'https://github.com/BrandonBlkk/Gift',
         tech: [
             <RiHtml5Line size={24} className='text-orange-500' />,
             <RiCss3Line size={24} className='text-blue-500' />,

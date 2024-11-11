@@ -26,7 +26,6 @@ const Footer = () => {
                             <p className="text-slate-500">I possess expertise in web development design, enabling me to provide valuable assistance in crafting visually appealing and user-friendly digital experiences. Let's collaborate to enhance your project's design!</p>
                             <ul className="my-6 space-y-3 text-xs">
                                 <li className="text-gray-400"><a className="hover:underline" href="#">Website</a></li>
-                                <li className="text-gray-400"><a className="hover:underline" href="#">Mobile apps</a></li>
                                 <li className="text-gray-400"><a className="hover:underline" href="#">Web apps</a></li>
                                 <li className="text-gray-400"><a className="hover:underline" href="#">Design systems</a></li>
                                 <li className="text-gray-400"><a className="hover:underline" href="#">Branding</a></li>
@@ -41,7 +40,6 @@ const Footer = () => {
                             <p className="text-slate-500">I specialize in web development and can assist you with various aspects of website creation, from design to implementation, ensuring a smooth and efficient development process.</p>
                             <ul className="my-6 space-y-3 text-xs">
                                 <li className="text-gray-400"><a className="hover:underline" href="#">Website</a></li>
-                                <li className="text-gray-400"><a className="hover:underline" href="#">Mobile apps</a></li>
                                 <li className="text-gray-400"><a className="hover:underline" href="#">Web apps</a></li>
                             </ul>
                         </div>
@@ -73,7 +71,18 @@ const Footer = () => {
                                     <RiArrowRightUpLine size={24}/>
                                 </a>
                             </div>
-                            <small>Don't know if fits your needs or not?<a className="underline" href="#">Let's have a call</a></small>
+                            <small>Don't know if fits your needs or not?
+                            <div className="dropdown dropdown-end">
+                                <div tabIndex={0} className="underline cursor-pointer">
+                                    Let's have a call
+                                </div>
+                                <ul
+                                    tabIndex={0}
+                                    className="menu menu-sm dropdown-content bg-base-100 text-black rounded-md z-[1] mt-3 text-nowrap p-2 shadow">
+                                    <a href="tel:+959963944129">Call Me: 09-963944129</a>
+                                </ul>
+                            </div>
+                            </small>
                         </div>
 
                         <div id="solution" className="space-y-3 max-w-xl">
@@ -117,22 +126,22 @@ const Footer = () => {
                     <p className="text-gray-500 border-b border-gray-500 py-2 uppercase mt-5 mb-4 sm:mt-16">Social Media</p>
 
                     <ul className="flex space-x-5">
-                        <li className="text-gray-300 hover:text-blue-400 transition-colors duration-200 ">
+                        <li className="tooltip tooltip-top text-gray-300 hover:text-blue-400 transition-colors duration-200" data-tip="Github">
                             <a href="https://github.com/BrandonBlkk" target="_blank">
                                 <RiGithubFill size={24}/>
                             </a>
                         </li>
-                        <li className="text-gray-300 hover:text-blue-400 transition-colors duration-200 ">
+                        <li className="tooltip tooltip-top text-gray-300 hover:text-blue-400 transition-colors duration-200" data-tip="Linkedin">
                             <a href="https://www.linkedin.com/in/brandon-undefined-2935a528b/" target="_blank">
                                 <RiLinkedinBoxFill size={24}/>
                             </a>
                         </li>
-                        <li className="text-gray-300 hover:text-blue-400 transition-colors duration-200 ">
+                        <li className="tooltip tooltip-top text-gray-300 hover:text-blue-400 transition-colors duration-200" data-tip="Facebook">
                             <a href="https://www.facebook.com/profile.php?id=100058219466401" target="_blank">
                                 <RiFacebookBoxFill size={24}/>
                             </a>
                         </li>
-                        <li className="text-gray-300 hover:text-blue-400 transition-colors duration-200 ">
+                        <li className="tooltip tooltip-top text-gray-300 hover:text-blue-400 transition-colors duration-200" data-tip="X">
                             <a href="https://twitter.com/home" target="_blank">
                                 <RiTwitterXFill size={24}/>
                             </a>

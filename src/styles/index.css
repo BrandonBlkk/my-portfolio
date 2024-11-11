@@ -6,22 +6,23 @@ html {
   scroll-behavior: smooth;
 }
 
-body::-webkit-scrollbar {
+/* *::-webkit-scrollbar {
   width: 5px;
 }
 
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   background-color: #f1f1f1;
 }
 
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   background-color: #4598d7;
   border-radius: 4px;
 }
 
-body::-webkit-scrollbar-thumb:hover {
+*::-webkit-scrollbar-thumb:hover {
   background-color: #555;
-}
+} */
+
 ::selection {
   background-color: rgb(220, 220, 220);
 }
