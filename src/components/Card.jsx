@@ -1,5 +1,6 @@
 import React from 'react';
 import { RiStackLine } from "react-icons/ri";
+import ViewDetails from './ViewDetails';
 
 const Card = ({ img, title, responsive, project, link, code, tech }) => {
     return (
@@ -8,29 +9,19 @@ const Card = ({ img, title, responsive, project, link, code, tech }) => {
                 <div className="hot-deal-img-container flex justify-center select-none border dark:border-none">
                     <img className="w-full h-full object-contain" src={img} alt={title} />
                 </div>
-
-                {/* Button */}
                 <div className="absolute inset-0 bg-black/40 flex flex-col gap-2 items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 select-none">
-                    <a href={link} className={link === '' && 'hidden'} target="_blank" rel="noreferrer">
-                        <button className="px-6 py-2 bg-white text-blue-500 font-semibold rounded-md hover:bg-slate-50 transition-colors duration-200">
-                            View Project
-                        </button>
-                    </a>
-                    <a href={code} target="_blank" rel="noreferrer">
-                        <button className="px-6 py-2 text-white font-semibold rounded-md transition-colors duration-200">
-                            View Code
-                        </button>
-                    </a>
+                    <ViewDetails 
+                        img={img}
+                        title={title}
+                        link={link}
+                        code={code}
+                    />
                 </div>
             </div>
-
-            {/* Card Content */}
             <div className="hot-deal-info mt-3">
                 <h1 className="font-bold">{title} {responsive ? '' : '(Not Fully Responsive)'}</h1>
                 <p className="text-sky-700 font-bold text-sm">{project}</p>
             </div>
-            
-            {/* Tech Stack */}
             <div className="mt-3">
                 <h1 className='flex items-center gap-1 font-semibold'>
                     Tech Stack

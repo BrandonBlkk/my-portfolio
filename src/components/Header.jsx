@@ -52,7 +52,7 @@ const Header = () => {
                     </div>
 
                     {/* Dark Mode Toggle */}
-                    <div onClick={toggleMoon} className='cursor-pointer'>
+                    <div onClick={toggleMoon} className='cursor-pointer tooltip tooltip-right' data-tip="Change theme">
                         <CgDarkMode size={34} className={`transition-all duration-100 ${isMoon ? 'rotate-180' : ''}`} />
                     </div>
                 </div>

@@ -5,7 +5,12 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      themes: ["light"],
+    },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+    require('tailwind-scrollbar'),
+  ],
 }

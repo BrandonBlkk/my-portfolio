@@ -59,14 +59,26 @@ const Hero = () => {
 
                 <section className="container mx-auto my-12">
                     <div className="md:max-w-2xl lg:max-w-3xl xl:max-w-5xl ml-auto">
-                        <h3 className="text-base mx-5 sm:text-2xl">
+                        <h3 className="text-base mx-5 sm:text-xl">
                             Hello, my true name is <span className="text-blue-400">Kyaw Zayar Tun</span>, a passionate web developer dedicated to crafting captivating online experiences. With a keen eye for detail and a love for coding, I specialize in building dynamic and user-friendly websites.
                             <p className="mt-4">Let's collaborate to bring your digital vision to life. Welcome to my portfolio!</p>
                         </h3>
-                        <a className="inline-flex items-center gap-2 mx-7 mt-5 select-none hover:text-sky-500 transition-colors duration-200" href="#">
+                        <button className="inline-flex items-center gap-2 mx-6 mt-5 select-none hover:text-sky-500 transition-colors duration-200" onClick={() => document.getElementById('cv').showModal()}>
                             <p>Download CV</p>
                             <RiMailDownloadLine size={20}/>
-                        </a>
+                        </button>
+                        <dialog id="cv" className="modal">
+                            <div className="modal-box card bg-base-100 max-w-[600px] shadow-xl rounded-md text-black p-3 relative scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+                                <div>
+                                    <img src="Images/f1f4a581-bd30-4552-90e2-3e4420cebb52-cover.png" alt="CV" />
+                                </div>
+                                <p className='absolute text-5xl opacity-10'>Sample CV</p>
+                                <a href="Images/f1f4a581-bd30-4552-90e2-3e4420cebb52-cover.png" download>Download</a>
+                            </div>
+                            <form method="dialog" className="modal-backdrop">
+                                <button>Close</button>
+                            </form>
+                        </dialog>
                     </div>
                 </section>
 

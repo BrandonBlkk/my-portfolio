@@ -83,7 +83,7 @@ const Main = () => {
                     </p>
                 </div>
 
-                <div className="flex justify-center">
+                <div className="flex justify-center select-none">
                         {Array.from({ length: totalPages }, (_, i) => (
                             <button 
                                 key={i + 1} 
