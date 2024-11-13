@@ -109,11 +109,11 @@ const Footer = () => {
                             <div className="space-y-3">
                                 <div className="flex flex-col gap-2 sm:flex-row">
                                     <div className="flex flex-col w-full">
-                                        <label for="name">Your Name:</label>
+                                        <label htmlFor="name">Your Name:</label>
                                         <input className="bg-transparent border border-slate-700 p-2 rounded outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-50 transition duration-300 ease-in-out" type="text" placeholder="Enter your name" required/>
                                     </div>
                                     <div className="flex flex-col w-full">
-                                        <label for="name">Your Email:</label>
+                                        <label htmlFor="name">Your Email:</label>
                                         <input className="bg-transparent border border-slate-700 p-2 rounded outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-50 transition duration-300 ease-in-out" type="text" placeholder="Enter your email" required/>
                                     </div>
                                 </div>

@@ -14,7 +14,7 @@ const Header = () => {
         setAge(currentYear - birthYear);
     }, []);
 
-    // // Check local storage dark or light mode
+    // Check local storage dark or light mode
     useEffect(() => {
         const storedTheme = localStorage.getItem('theme');
         if (storedTheme === 'dark') {

@@ -73,7 +73,6 @@ const Hero = () => {
                                     <img src="Images/f1f4a581-bd30-4552-90e2-3e4420cebb52-cover.png" alt="CV" />
                                 </div>
                                 <p className='absolute text-5xl opacity-10'>Sample CV</p>
-                                <a href="Images/f1f4a581-bd30-4552-90e2-3e4420cebb52-cover.png" download>Download</a>
                             </div>
                             <form method="dialog" className="modal-backdrop">
                                 <button>Close</button>

@@ -7,7 +7,7 @@ import TimelineItem from './TimelineItem';
 const Timeline = () => {
     return (
         <>
-            <h1 className='flex items-center gap-2 text-3xl font-semibold justify-center mb-10'>
+            <h1 className='flex items-center gap-2 text-2xl sm:text-3xl font-semibold justify-center mb-10'>
                 <FcTimeline size={30}/>
                 Education Timeline
             </h1>
@@ -33,7 +33,7 @@ const Timeline = () => {
                         duration={'1 year'}
                         title={'B.E.H.S (2) Yankin (High School)'}
                         description={`Respected high school where I built a strong academic foundation and developed lifelong skills. 
-                        Located in Yangon, it provided me with valuable learning experiences and opportunities to connect with supportive teachers 
+                        Located in Yangon, Myanmar, it provided me with valuable learning experiences and opportunities to connect with supportive teachers 
                         and friends, shaping both my personal and academic growth.`}
                         link={''}
                     />

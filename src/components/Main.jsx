@@ -101,10 +101,14 @@ const Main = () => {
                 {currentItems.map(item => (
                     <Card 
                         key={item.id}
+                        modalID = {item.modalID}
                         img={item.img}
                         title={item.title}
+                        description={item.description}
+                        feature={item.feature}
                         project={item.project}
                         responsive={item.responsive}
+                        device={item.device}
                         tech={item.tech}
                         link={item.link}
                         code={item.code}
