@@ -6,23 +6,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* *::-webkit-scrollbar {
-  width: 5px;
-}
-
-*::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #4598d7;
-  border-radius: 4px;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
-} */
-
 ::selection {
   background-color: rgb(220, 220, 220);
 }
@@ -72,4 +55,9 @@ html {
   animation-duration: 16s;
   bottom: 30%;
   left: 60%;
+}
+.moving-icon:nth-child(7) {
+  animation-duration: 17s;
+  top: 40%;
+  right: 50%;
 }

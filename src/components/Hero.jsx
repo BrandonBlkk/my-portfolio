@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { RiCss3Line, RiHtml5Line, RiJavascriptLine, RiTailwindCssLine, RiArrowRightUpLine, RiMailDownloadLine, RiReactjsFill } from "react-icons/ri";
+import { RiCss3Line, RiHtml5Line, RiJavascriptLine, RiTailwindCssLine, RiBootstrapLine, RiArrowRightUpLine, RiMailDownloadLine, RiReactjsFill } from "react-icons/ri";
 import { FaPhp } from "react-icons/fa6";
 import { items } from '../constants';
 
@@ -16,13 +16,15 @@ const Hero = () => {
         <div className="relative overflow-hidden">
             {/* Moving background icons */}
             <div className="absolute inset-0 z-0">
-                <div className="moving-icon absolute"><RiHtml5Line size={48} className="text-orange-500 opacity-0 dark:opacity-15"/></div>
-                <div className="moving-icon absolute"><RiCss3Line size={48} className="text-blue-500 opacity-0 dark:opacity-15"/></div>
-                <div className="moving-icon absolute"><RiJavascriptLine size={48} className="text-yellow-500 opacity-0 dark:opacity-15"/></div>
-                <div className="moving-icon absolute"><RiTailwindCssLine size={48} className="text-blue-500 opacity-0 dark:opacity-15"/></div>
-                <div className="moving-icon absolute"><RiReactjsFill size={48} className="text-cyan-500 opacity-0 dark:opacity-15"/></div>
-                <div className="moving-icon absolute"><FaPhp size={48} className="text-purple-500 opacity-0 dark:opacity-15"/></div>
+                <div className="moving-icon absolute"><RiHtml5Line size={48} className="text-orange-500 opacity-0 dark:opacity-15" /></div>
+                <div className="moving-icon absolute"><RiCss3Line size={48} className="text-blue-500 opacity-0 dark:opacity-15" /></div>
+                <div className="moving-icon absolute"><RiJavascriptLine size={48} className="text-yellow-500 opacity-0 dark:opacity-15" /></div>
+                <div className="moving-icon absolute"><RiTailwindCssLine size={48} className="text-blue-500 opacity-0 dark:opacity-15" /></div>
+                <div className="moving-icon absolute"><RiReactjsFill size={48} className="text-cyan-500 opacity-0 dark:opacity-15" /></div>
+                <div className="moving-icon absolute"><FaPhp size={48} className="text-indigo-500 opacity-0 dark:opacity-15" /></div>
+                <div className="moving-icon absolute"><RiBootstrapLine size={48} className="text-purple-500 opacity-0 dark:opacity-15" /></div>
             </div>
+
 
             {/* Rest of the Hero component */}
             <div className="relative z-10">
@@ -38,12 +40,27 @@ const Hero = () => {
                             <h1 className="font-semibold">Tech Stack</h1>
                             <span>|</span>
                             <div className="flex items-center flex-wrap gap-3 select-none cursor-pointer">
-                                <RiHtml5Line size={24} className='text-orange-500' />
-                                <RiCss3Line size={24} className='text-blue-500' />
-                                <RiJavascriptLine size={24} className="text-yellow-500"/>
-                                <RiTailwindCssLine size={24} className="text-blue-500"/> 
-                                <RiReactjsFill size={24} className='text-cyan-500'/>
-                                <FaPhp size={24} className='text-purple-500'/> 
+                                <div className="tooltip" data-tip="57.62% used">
+                                    <RiHtml5Line size={24} className='text-orange-500' />
+                                </div>
+                                <div className="tooltip" data-tip="6.38% used">
+                                    <RiCss3Line size={24} className='text-blue-500' />
+                                </div>
+                                <div className="tooltip" data-tip="3.77% used">
+                                    <RiJavascriptLine size={24} className="text-yellow-500"/>
+                                </div>
+                                <div className="tooltip" data-tip="30.45% used">
+                                    <RiTailwindCssLine size={24} className="text-blue-500"/> 
+                                </div>
+                                <div className="tooltip" data-tip="0% used">
+                                    <RiBootstrapLine size={24} className="text-purple-500"/>
+                                </div>
+                                <div className="tooltip" data-tip="3.77% used">
+                                    <RiReactjsFill size={24} className='text-cyan-500'/>
+                                </div>
+                                <div className="tooltip" data-tip="31.89% used">
+                                    <FaPhp size={24} className='text-indigo-500'/> 
+                                </div>
                             </div>
                         </div>
                         <div className="flex gap-3">
