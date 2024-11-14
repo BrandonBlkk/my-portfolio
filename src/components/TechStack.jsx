@@ -4,7 +4,7 @@ import { skills } from '../constants';
 const TechStack = () => {
     return (
         <div className="flex items-center gap-5 mb-8">
-            <h1 className="font-semibold">Tech Stack</h1>
+            <h1 className="font-semibold text-nowrap">Tech Stack</h1>
             <span>|</span>
             <div className="flex items-center flex-wrap gap-3 select-none cursor-pointer">
                 {skills.map((skill) => (
