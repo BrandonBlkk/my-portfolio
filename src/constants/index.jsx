@@ -1,5 +1,5 @@
 import { RiBootstrapLine, RiCss3Line, RiHtml5Line, RiJavascriptLine, RiReactjsFill, RiReactjsLine, RiTailwindCssLine } from "react-icons/ri";
-import { FaPhp } from "react-icons/fa6";
+import { FaPhp, FaGitAlt } from "react-icons/fa6";
 import { PiDeviceMobileSpeakerDuotone, PiDeviceTabletSpeakerDuotone, PiDevicesDuotone } from "react-icons/pi";
 
 export const skills = [
@@ -38,6 +38,11 @@ export const skills = [
         tech: <FaPhp size={24} className='text-indigo-500'/>,
         used: "31.89% used"
     },
+    {
+        id: 7,
+        tech: <FaGitAlt size={24} className='text-orange-500'/>,
+        used: "48.97% used"
+    }
 ]
 
 export const items = [

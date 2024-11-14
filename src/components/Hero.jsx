@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { RiCss3Line, RiHtml5Line, RiJavascriptLine, RiTailwindCssLine, RiBootstrapLine, RiArrowRightUpLine, RiMailDownloadLine, RiReactjsFill } from "react-icons/ri";
-import { FaPhp } from "react-icons/fa6";
+import { FaGitAlt, FaPhp } from "react-icons/fa6";
 import { items } from '../constants';
 import TechStack from './TechStack';
 
@@ -17,15 +17,31 @@ const Hero = () => {
         <div className="relative overflow-hidden">
             {/* Moving background icons */}
             <div className="absolute inset-0 z-0">
-                <div className="moving-icon absolute"><RiHtml5Line size={48} className="text-orange-500 opacity-0 dark:opacity-15" /></div>
-                <div className="moving-icon absolute"><RiCss3Line size={48} className="text-blue-500 opacity-0 dark:opacity-15" /></div>
-                <div className="moving-icon absolute"><RiJavascriptLine size={48} className="text-yellow-500 opacity-0 dark:opacity-15" /></div>
-                <div className="moving-icon absolute"><RiTailwindCssLine size={48} className="text-blue-500 opacity-0 dark:opacity-15" /></div>
-                <div className="moving-icon absolute"><RiReactjsFill size={48} className="text-cyan-500 opacity-0 dark:opacity-15" /></div>
-                <div className="moving-icon absolute"><FaPhp size={48} className="text-indigo-500 opacity-0 dark:opacity-15" /></div>
-                <div className="moving-icon absolute"><RiBootstrapLine size={48} className="text-purple-500 opacity-0 dark:opacity-15" /></div>
-            </div>
-
+                <div className="moving-icon absolute">
+                    <RiHtml5Line size={48} className="text-orange-500 opacity-0 dark:opacity-15" />
+                </div>
+                <div className="moving-icon absolute">
+                    <RiCss3Line size={48} className="text-blue-500 opacity-0 dark:opacity-15" />
+                </div>
+                <div className="moving-icon absolute">
+                    <RiJavascriptLine size={48} className="text-yellow-500 opacity-0 dark:opacity-15" />
+                </div>
+                <div className="moving-icon absolute">
+                    <RiTailwindCssLine size={48} className="text-blue-500 opacity-0 dark:opacity-15" />
+                </div>
+                <div className="moving-icon absolute">
+                    <RiReactjsFill size={48} className="text-cyan-500 opacity-0 dark:opacity-15" />
+                </div>
+                <div className="moving-icon absolute">
+                    <FaPhp size={48} className="text-indigo-500 opacity-0 dark:opacity-15" />
+                </div>
+                <div className="moving-icon absolute">
+                    <RiBootstrapLine size={48} className="text-purple-500 opacity-0 dark:opacity-15" />
+                </div>
+                <div className="moving-icon absolute">
+                    <FaGitAlt size={48} className="text-red-500 opacity-0 dark:opacity-15" />
+                </div>
+                </div>
 
             {/* Rest of the Hero component */}
             <div className="relative z-10">

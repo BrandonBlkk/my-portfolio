@@ -62,3 +62,9 @@ html {
   top: 40%;
   right: 50%;
 }
+
+.moving-icon:nth-child(8) {
+  animation-duration: 14s;
+  bottom: 20%;
+  right: 15%;
+}
