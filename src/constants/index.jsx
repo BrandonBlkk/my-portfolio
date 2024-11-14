@@ -1,6 +1,44 @@
-import { RiCss3Line, RiHtml5Line, RiJavascriptLine, RiReactjsLine, RiTailwindCssLine } from "react-icons/ri";
+import { RiBootstrapLine, RiCss3Line, RiHtml5Line, RiJavascriptLine, RiReactjsFill, RiReactjsLine, RiTailwindCssLine } from "react-icons/ri";
 import { FaPhp } from "react-icons/fa6";
 import { PiDeviceMobileSpeakerDuotone, PiDeviceTabletSpeakerDuotone, PiDevicesDuotone } from "react-icons/pi";
+
+export const skills = [
+    {
+        id: 1,
+        tech: <RiHtml5Line size={24} className='text-orange-500' />,
+        used: "57.62% used"
+    },
+    {
+        id: 2,
+        tech: <RiCss3Line size={24} className='text-blue-500' />,
+        used: "6.38% used"
+    },
+    {
+        id: 3,
+        tech: <RiJavascriptLine size={24} className="text-yellow-500"/>,
+        used: "3.77% used"
+    },
+    {
+        id: 4,
+        tech: <RiTailwindCssLine size={24} className="text-blue-500"/> ,
+        used: "30.45% used"
+    },
+    {
+        id: 5,
+        tech: <RiBootstrapLine size={24} className="text-purple-500"/>,
+        used: "0% used"
+    },
+    {
+        id: 6,
+        tech: <RiReactjsFill size={24} className='text-cyan-500'/>,
+        used: "3.77% used"
+    },
+    {
+        id: 7,
+        tech: <FaPhp size={24} className='text-indigo-500'/>,
+        used: "31.89% used"
+    },
+]
 
 export const items = [
     {

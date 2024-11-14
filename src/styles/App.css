@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: rgb(220, 220, 220);
+}
+
+/* Custom moving icon animation */
+.moving-icon {
+  animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(100px, 50px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.moving-icon:nth-child(2) {
+  animation-duration: 12s;
+  top: 20%;
+  left: 30%;
+}
+
+.moving-icon:nth-child(3) {
+  animation-duration: 15s;
+  top: 50%;
+  left: 10%;
+}
+
+.moving-icon:nth-child(4) {
+  animation-duration: 20s;
+  top: 70%;
+  left: 40%;
+}
+
+.moving-icon:nth-child(5) {
+  animation-duration: 18s;
+  top: 30%;
+  right: 20%;
+}
+
+.moving-icon:nth-child(6) {
+  animation-duration: 16s;
+  bottom: 30%;
+  left: 60%;
+}
+
+.moving-icon:nth-child(7) {
+  animation-duration: 17s;
+  top: 40%;
+  right: 50%;
+}

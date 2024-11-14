@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { RiCss3Line, RiHtml5Line, RiJavascriptLine, RiTailwindCssLine, RiBootstrapLine, RiArrowRightUpLine, RiMailDownloadLine, RiReactjsFill } from "react-icons/ri";
 import { FaPhp } from "react-icons/fa6";
 import { items } from '../constants';
+import TechStack from './TechStack';
 
 const Hero = () => {
     const [yearExp, setYearExp] = useState(0);
@@ -36,33 +37,7 @@ const Hero = () => {
                         <h4 className="text-base my-6 sm:text-xl">
                             As a junior frontend developer, I craft intuitive interfaces, optimize user experiences, and innovate with code to bring designs to life.
                         </h4>
-                        <div className="flex items-center gap-5 mb-8">
-                            <h1 className="font-semibold">Tech Stack</h1>
-                            <span>|</span>
-                            <div className="flex items-center flex-wrap gap-3 select-none cursor-pointer">
-                                <div className="tooltip" data-tip="57.62% used">
-                                    <RiHtml5Line size={24} className='text-orange-500' />
-                                </div>
-                                <div className="tooltip" data-tip="6.38% used">
-                                    <RiCss3Line size={24} className='text-blue-500' />
-                                </div>
-                                <div className="tooltip" data-tip="3.77% used">
-                                    <RiJavascriptLine size={24} className="text-yellow-500"/>
-                                </div>
-                                <div className="tooltip" data-tip="30.45% used">
-                                    <RiTailwindCssLine size={24} className="text-blue-500"/> 
-                                </div>
-                                <div className="tooltip" data-tip="0% used">
-                                    <RiBootstrapLine size={24} className="text-purple-500"/>
-                                </div>
-                                <div className="tooltip" data-tip="3.77% used">
-                                    <RiReactjsFill size={24} className='text-cyan-500'/>
-                                </div>
-                                <div className="tooltip" data-tip="31.89% used">
-                                    <FaPhp size={24} className='text-indigo-500'/> 
-                                </div>
-                            </div>
-                        </div>
+                        <TechStack />
                         <div className="flex gap-3">
                             <a className="bg-slate-900 text-white px-6 py-3 rounded-full hover:bg-slate-800 transition-colors duration-300 select-none dark:bg-white dark:text-black dark:hover:bg-slate-200" href="#form">Start a Project</a>
                             <a className="bg-sky-500 text-white p-4 rounded-full hover:bg-slate-800 transition-colors duration-150 dark:hover:bg-sky-600" href="#"><RiArrowRightUpLine size={20}/></a>
