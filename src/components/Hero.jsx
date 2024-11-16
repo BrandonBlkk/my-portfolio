@@ -3,6 +3,7 @@ import { RiCss3Line, RiHtml5Line, RiJavascriptLine, RiTailwindCssLine, RiBootstr
 import { FaGitAlt, FaPhp } from "react-icons/fa6";
 import { items } from '../constants';
 import TechStack from './TechStack';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
     const [yearExp, setYearExp] = useState(0);
@@ -12,6 +13,39 @@ const Hero = () => {
         const startYear = 2023;
         setYearExp(currentYear - startYear);
     });
+
+    const text = "As a junior frontend developer, I craft intuitive interfaces, optimize user experiences, and innovate with code to bring designs to life.";
+    const words = text.split(" "); 
+    
+    // Variants for animation
+    const containerVariants = {
+        hidden: { opacity: 1 }, 
+        visible: {
+            transition: {
+                staggerChildren: 0.1, 
+            },
+        },
+    };
+    const wordVariants = {
+        hidden: { opacity: 0, y: 10, scale: 0.5 }, 
+        visible: { opacity: 1, y: 0, scale: 1 },
+    };
+    const flipEffect = {
+        hidden: {
+            opacity: 0,
+            rotateX: 90, 
+            transformOrigin: "bottom",
+        },
+        visible: {
+            opacity: 1,
+            rotateX: 0, 
+            transition: {
+                type: "spring",
+                stiffness: 60,
+                damping: 15,
+            },
+        },
+    };
 
     return (
         <div className="relative overflow-hidden">
@@ -46,24 +80,39 @@ const Hero = () => {
             {/* Rest of the Hero component */}
             <div className="relative z-10">
                 <div className="container mx-auto relative">
-                    <div className="mx-5">
-                        <h2 className="text-4xl sm:text-5xl">
-                            Hi, I'm Brandon <span className="skills text-blue-400">Frontend Developer</span>
-                        </h2>
+                    <motion.div 
+                        className="mx-5"
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                    >
+                        <motion.h2
+                            className="text-4xl sm:text-5xl"
+                            initial="hidden"
+                            animate="visible"
+                            variants={flipEffect}
+                        >
+                            Hi, I'm Brandon{" "}
+                            <span className="skills text-blue-400">Frontend Developer</span>
+                        </motion.h2>
                         <h4 className="text-base my-6 sm:text-xl">
-                            As a junior frontend developer, I craft intuitive interfaces, optimize user experiences, and innovate with code to bring designs to life.
+                            {words.map((word, index) => (
+                                <motion.span
+                                    key={index}
+                                    className="inline-block mx-[3px]"
+                                    variants={wordVariants}
+                                >
+                                    {word}
+                                </motion.span>
+                            ))}
                         </h4>
                         <TechStack />
-                        <div className="flex gap-3">
-                            <a className="bg-slate-900 text-white px-6 py-3 rounded-full hover:bg-slate-800 transition-colors duration-300 select-none dark:bg-white dark:text-black dark:hover:bg-slate-200" href="#form">Start a Project</a>
+                        <div className="flex items-center gap-3">
+                            <a className="bg-slate-900 text-white px-6 py-4 rounded-full hover:bg-slate-800 transition-colors duration-300 select-none dark:bg-white dark:text-black dark:hover:bg-slate-200" href="#form">Start a Project</a>
                             <a className="bg-sky-500 text-white p-4 rounded-full hover:bg-slate-800 transition-colors duration-150 dark:hover:bg-sky-600" href="#"><RiArrowRightUpLine size={20}/></a>
                         </div>
-                    </div> 
+                    </motion.div> 
                 </div>
-
-                <a href="#" id="scrollUp" className="fixed right-20 -bottom-20 border border-slate-500 hidden items-center gap-5 bg-slate-900 rounded-t-full text-white px-5 py-2 z-10 transition-all duration-300 lg:flex">
-                    <i className="ri-arrow-up-wide-line text-xl"></i>
-                </a>
 
                 <section className="container mx-auto my-12">
                     <div className="md:max-w-2xl lg:max-w-3xl xl:max-w-5xl ml-auto">

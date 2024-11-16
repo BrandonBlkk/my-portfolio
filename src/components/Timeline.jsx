@@ -1,5 +1,4 @@
 import React from 'react'
-import { FcCalendar } from "react-icons/fc";
 import { FcTimeline } from "react-icons/fc";
 import Modal from './Modal';
 import TimelineItem from './TimelineItem';

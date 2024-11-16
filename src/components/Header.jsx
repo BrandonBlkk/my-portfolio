@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import { RiAtLine, RiMapPinUserFill } from "react-icons/ri";
 import { CgDarkMode } from "react-icons/cg";
+import { motion } from 'framer-motion';
+import { PiMouseScrollThin } from 'react-icons/pi';
 
 const Header = () => {
     const [age, setAge] = useState(0);
     const [isMoon, setIsMoon] = useState(false);
+    const [scrollY, setScrollY] = useState(0);
 
     // Calculate age on mount
     useEffect(() => {
@@ -26,6 +29,19 @@ const Header = () => {
         }
     })
 
+    // Handle scroll event to move the scroll icon
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     // Toggle dark mode
     const toggleMoon = () => {
         const newTheme = isMoon ? 'light' : 'dark';
@@ -34,6 +50,23 @@ const Header = () => {
 
         localStorage.setItem('theme', newTheme);
     }
+
+    // Variant for animation
+    const pulseEffect = {
+        hidden: { opacity: 0.5, scale: 0.9 },
+        visible: {
+            opacity: [0.5, 1, 0.5],
+            scale: [0.9, 1.1, 0.9],
+            transition: {
+                duration: 1.5,
+                repeat: Infinity,
+            },
+        },
+    };
+    const scrollAnimation = {
+        y: scrollY > 50 ? -200 : 0, 
+        opacity: scrollY > 50 ? 0 : 1, 
+    };
 
     return (
         <>
@@ -56,6 +89,16 @@ const Header = () => {
                         <CgDarkMode size={34} className={`transition-all duration-100 ${isMoon ? 'rotate-180' : ''}`} />
                     </div>
                 </div>
+
+                <motion.div
+                    className="fixed top-25 left-1/2 transform -translate-x-1/2 hidden md:flex transition-all duration-100"
+                    variants={pulseEffect}
+                    initial="hidden"
+                    animate="visible"
+                    style={scrollAnimation}
+                >
+                    <PiMouseScrollThin size={32} className="text-gray-500 dark:text-white" />
+                </motion.div>
 
                 <Navbar />
             </nav>

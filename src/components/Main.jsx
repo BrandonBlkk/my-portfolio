@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import Card from './Card';
 import { items } from '../constants';
 import { RiArrowUpWideLine } from 'react-icons/ri'; 
@@ -40,6 +41,16 @@ const Main = () => {
         setCurrentPage(pageNum);
     };
 
+    // Variants for animation
+    const slideIn = {
+        hidden: { opacity: 0, x: -15 },
+        visible: { opacity: 1, x: 0 },
+    };
+    const fadeIn = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+    };
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 500) {
@@ -53,37 +64,61 @@ const Main = () => {
     }, []);
 
     return (
-        <div id='work' className="container mx-auto my-10">
-            <div className="mx-5">
+        <motion.div 
+            id='work' 
+            className="container mx-auto my-10" 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}>
+            <motion.div 
+                className="mx-5" 
+                variants={slideIn} 
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0 }}
+                viewport={{amount: 0.2}}
+            >
                 <h2 className="text-4xl sm:text-5xl">The work I do</h2>
-            </div>
+            </motion.div>
 
             <div className="flex flex-col gap-5 justify-between items-center mx-5 my-5 sm:flex-row">
                 <div className="flex flex-wrap gap-3">
-                    <p 
+                    <motion.p 
                         id="all" 
                         className={`flex items-center justify-center border px-5 py-4 rounded-full select-none cursor-pointer transition-colors duration-150 hover:border-slate-300 dark:border-slate-500 ${activeTab === 'all' ? 'bg-slate-900 text-white dark:bg-white dark:text-black' : 'border'}`}
                         onClick={allProject}
+                        variants={fadeIn} 
+                        transition={{ duration: 0.5, ease: "easeOut", delay: 0 }}
+                        viewport={{amount: 0.2}}
                     >
                         All
-                    </p>
-                    <p 
+                    </motion.p>
+                    <motion.p 
                         id="design" 
                         className={`flex items-center justify-center border px-5 py-4 rounded-full select-none cursor-pointer transition-colors duration-150 hover:border-slate-300 dark:border-slate-500 ${activeTab === 'design' ? 'bg-slate-900 text-white dark:bg-white dark:text-black' : 'border'}`}
                         onClick={designProject}
+                        variants={fadeIn} 
+                        transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+                        viewport={{amount: 0.2}}
                     >
                         Design
-                    </p>
-                    <p 
+                    </motion.p>
+                    <motion.p 
                         id="dev" 
                         className={`flex items-center justify-center border px-5 py-4 rounded-full select-none cursor-pointer transition-colors duration-150 hover:border-slate-300 dark:border-slate-500 ${activeTab === 'dev' ? 'bg-slate-900 text-white dark:bg-white dark:text-black' : 'border'}`}
                         onClick={developmentProject}
+                        variants={fadeIn} 
+                        transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+                        viewport={{amount: 0.2}}
                     >
                         Development
-                    </p>
+                    </motion.p>
                 </div>
 
-                <div className="flex justify-center select-none">
+                <motion.div 
+                    className="flex justify-center select-none"
+                    variants={fadeIn} 
+                    transition={{ duration: 0.5, ease: "easeOut", delay: 0 }}
+                    viewport={{amount: 0.2}}
+                >
                         {Array.from({ length: totalPages }, (_, i) => (
                             <button 
                                 key={i + 1} 
@@ -93,7 +128,7 @@ const Main = () => {
                                 {i + 1}
                             </button>
                         ))}
-                </div>
+                </motion.div>
             </div>
 
             {/* Cards Display */}
@@ -116,12 +151,17 @@ const Main = () => {
                 ))}
             </div>
 
-            <a href="#" id="scrollUp" 
+            <motion.a 
+                href="#" 
+                id="scrollUp" 
                 className={`fixed right-20 -bottom-20 border border-slate-500 hidden items-center gap-5 bg-slate-900 rounded-t-full text-white px-5 py-3 z-10 dark:bg-white dark:text-black transition-all duration-300 lg:flex ${scrollUp ? 'bottom-0' : '-bottom-20'}`}
+                intital={{scale: 0}}
+                whileHover={{scale: 1.1}}
+                transition={{ duration: 0.1}}
             >
                 <RiArrowUpWideLine size={20}/>
-            </a>
-        </div>
+            </motion.a>
+        </motion.div>
     );
 };
 

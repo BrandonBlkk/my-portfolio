@@ -1,10 +1,16 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { RiStackLine } from "react-icons/ri";
 import ViewDetails from './ViewDetails';
 
 const Card = ({ modalID, img, title, description, feature, responsive, device, project, link, code, tech }) => {
     return (
-        <div className="hot-deal-box w-full mx-5 relative border-b-2 border-slate-200 dark:border-slate-600 md:border-b-0 sm:w-80 group py-1">
+        <motion.div 
+            className="hot-deal-box w-full mx-5 relative border-b-2 border-slate-200 dark:border-slate-600 md:border-b-0 sm:w-80 group py-1"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+        >
             <div className="relative overflow-hidden">
                 <div className="hot-deal-img-container flex justify-center select-none border dark:border-none">
                     <img className="w-full h-full object-contain" src={img} alt={title} />
@@ -42,7 +48,7 @@ const Card = ({ modalID, img, title, description, feature, responsive, device, p
                     )}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
