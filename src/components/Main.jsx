@@ -146,7 +146,6 @@ const Main = () => {
                 {currentItems.map(item => (
                     <motion.div
                         key={item.id}
-                        className="p-2"
                         variants={fadeIn2}
                         initial="hidden"
                         whileInView="visible"
