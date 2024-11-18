@@ -4,7 +4,7 @@ import ViewDetails from './ViewDetails';
 
 const Card = ({ modalID, img, title, description, feature, responsive, device, project, link, code, tech }) => {
     return (
-        <div className="hot-deal-box w-full mx-5 relative border-b-2 border-slate-200 dark:border-slate-600 md:border-b-0 sm:w-80 group py-1">
+        <div className="hot-deal-box w-full px-3 relative border-b-2 border-slate-200 dark:border-slate-600 md:border-b-0 sm:w-80 group py-1">
             <div className="relative overflow-hidden group">
                 <div className="hot-deal-img-container flex justify-center rounded-sm select-none border dark:border-none group-hover:scale-105 transition-all duration-300">
                     <img className="w-full h-full object-contain rounded-sm" src={img} alt={title} />
