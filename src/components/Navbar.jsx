@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react'
 
 const Navbar = () => {
@@ -16,13 +15,14 @@ const Navbar = () => {
             setIsScrolled(true);
         } else {
             setIsScrolled(false);
+            setActiveTab('about')
         }
         };
         window.addEventListener('scroll', handleScroll);
     }, []);
 
     return (
-        <div className={isScrolled && 'fixed top-3 right-10 z-30 shadow-md rounded-full bg-white dark:bg-slate-900'}>
+        <div className={isScrolled && 'fixed top-3 right-10 z-30 shadow-md rounded-full bg-white dark:bg-sky-950'}>
             <ul className="flex border rounded-full md:ml-auto dark:border-slate-500">
                 <a
                     href="#"

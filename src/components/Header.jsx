@@ -60,12 +60,16 @@ const Header = () => {
             transition: {
                 duration: 1.5,
                 repeat: Infinity,
-            },
-        },
+            }
+        }
     };
     const scrollAnimation = {
         y: scrollY > 50 ? -200 : 0, 
-        opacity: scrollY > 50 ? 0 : 1, 
+        opacity: scrollY > 50 ? 0 : 1
+    };
+
+    const scrollAnimation2 = {
+        scale: scrollY > 50 ? 0.3 : 1
     };
 
     return (
@@ -91,13 +95,14 @@ const Header = () => {
                 </div>
 
                 <motion.div
-                    className="fixed top-25 left-1/2 transform -translate-x-1/2 hidden md:flex transition-all duration-100"
+                    className="fixed flex-col items-center top-25 left-1/2 transform -translate-x-1/2 hidden lg:flex transition-all duration-100"
                     variants={pulseEffect}
                     initial="hidden"
                     animate="visible"
                     style={scrollAnimation}
                 >
                     <PiMouseScrollThin size={32} className="text-gray-500 dark:text-white" />
+                    <motion.p className='text-xs transition-all duration-200' style={scrollAnimation2}>Scroll for more</motion.p>
                 </motion.div>
 
                 <Navbar />

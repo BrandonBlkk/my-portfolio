@@ -13,15 +13,15 @@ const Footer = () => {
     // Variants for animation
     const slideIn = {
         hidden: { opacity: 0, x: -15 },
-        visible: { opacity: 1, x: 0 },
+        visible: { opacity: 1, x: 0 }
     };
     const fadeIn = {
         hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0 },
+        visible: { opacity: 1, y: 0 }
     };
 
     return (
-        <footer className="bg-slate-900 text-white pt-12 pb-3">
+        <footer className="bg-slate-900 dark:bg-gradient-to-r dark:from-slate-900 dark:to-sky-950 dark:text-white text-white pt-12 pb-3">
             <div className=" container mx-auto">
                 <div className="mx-5">
                     <motion.div

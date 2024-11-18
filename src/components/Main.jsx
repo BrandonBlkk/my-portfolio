@@ -44,11 +44,15 @@ const Main = () => {
     // Variants for animation
     const slideIn = {
         hidden: { opacity: 0, x: -15 },
-        visible: { opacity: 1, x: 0 },
+        visible: { opacity: 1, x: 0 }
     };
     const fadeIn = {
         hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0 },
+        visible: { opacity: 1, y: 0 }
+    };
+    const fadeIn2 = {
+        hidden: { opacity: 0, y: 10 },
+        visible: { opacity: 1, y: 0 }
     };
 
     useEffect(() => {
@@ -132,24 +136,39 @@ const Main = () => {
             </div>
 
             {/* Cards Display */}
-            <div className="flex justify-center flex-wrap gap-y-2">
+            <motion.div 
+                className="flex justify-center flex-wrap gap-y-2"             
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                
+            >
                 {currentItems.map(item => (
-                    <Card 
+                    <motion.div
                         key={item.id}
-                        modalID = {item.modalID}
-                        img={item.img}
-                        title={item.title}
-                        description={item.description}
-                        feature={item.feature}
-                        project={item.project}
-                        responsive={item.responsive}
-                        device={item.device}
-                        tech={item.tech}
-                        link={item.link}
-                        code={item.code}
-                    />
+                        className="p-2"
+                        variants={fadeIn2}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.1 }}
+                        transition={{ duration: 0.5, ease: "easeOut", staggerChildren: 0.2  }}
+                    >
+                        <Card 
+                            modalID={item.modalID}
+                            img={item.img}
+                            title={item.title}
+                            description={item.description}
+                            feature={item.feature}
+                            project={item.project}
+                            responsive={item.responsive}
+                            device={item.device}
+                            tech={item.tech}
+                            link={item.link}
+                            code={item.code}
+                        />
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
 
             <motion.a 
                 href="#" 

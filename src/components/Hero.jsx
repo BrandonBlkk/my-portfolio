@@ -24,11 +24,11 @@ const Hero = () => {
             transition: {
                 staggerChildren: 0.1, 
             },
-        },
+        }
     };
     const wordVariants = {
         hidden: { opacity: 0, y: 10, scale: 0.5 }, 
-        visible: { opacity: 1, y: 0, scale: 1 },
+        visible: { opacity: 1, y: 0, scale: 1 }
     };
     const flipEffect = {
         hidden: {
@@ -44,7 +44,7 @@ const Hero = () => {
                 stiffness: 60,
                 damping: 15,
             },
-        },
+        }
     };
 
     return (
@@ -52,28 +52,28 @@ const Hero = () => {
             {/* Moving background icons */}
             <div className="absolute inset-0 z-0">
                 <div className="moving-icon absolute">
-                    <RiHtml5Line size={48} className="text-orange-500 opacity-0 dark:opacity-15" />
+                    <RiHtml5Line size={48} className="text-orange-500 opacity-0 dark:opacity-25" />
                 </div>
                 <div className="moving-icon absolute">
-                    <RiCss3Line size={48} className="text-blue-500 opacity-0 dark:opacity-15" />
+                    <RiCss3Line size={40} className="text-blue-500 opacity-0 dark:opacity-15" />
                 </div>
                 <div className="moving-icon absolute">
-                    <RiJavascriptLine size={48} className="text-yellow-500 opacity-0 dark:opacity-15" />
+                    <RiJavascriptLine size={48} className="text-yellow-500 opacity-0 dark:opacity-20" />
                 </div>
                 <div className="moving-icon absolute">
-                    <RiTailwindCssLine size={48} className="text-blue-500 opacity-0 dark:opacity-15" />
+                    <RiTailwindCssLine size={48} className="text-blue-500 opacity-0 dark:opacity-40" />
                 </div>
                 <div className="moving-icon absolute">
-                    <RiReactjsFill size={48} className="text-cyan-500 opacity-0 dark:opacity-15" />
+                    <RiReactjsFill size={48} className="text-cyan-500 opacity-0 dark:opacity-40" />
                 </div>
                 <div className="moving-icon absolute">
-                    <FaPhp size={48} className="text-indigo-500 opacity-0 dark:opacity-15" />
+                    <FaPhp size={40} className="text-indigo-500 opacity-0 dark:opacity-30" />
                 </div>
                 <div className="moving-icon absolute">
-                    <RiBootstrapLine size={48} className="text-purple-500 opacity-0 dark:opacity-15" />
+                    <RiBootstrapLine size={38} className="text-purple-500 opacity-0 dark:opacity-30" />
                 </div>
                 <div className="moving-icon absolute">
-                    <FaGitAlt size={48} className="text-red-500 opacity-0 dark:opacity-15" />
+                    <FaGitAlt size={45} className="text-red-500 opacity-0 dark:opacity-20" />
                 </div>
                 </div>
 

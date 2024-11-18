@@ -6,41 +6,49 @@ export const skills = [
     {
         id: 1,
         tech: <RiHtml5Line size={24} className='text-orange-500' />,
+        name: 'HTML',
         used: "57.62% used"
     },
     {
         id: 2,
         tech: <RiCss3Line size={24} className='text-blue-500' />,
+        name: 'CSS',
         used: "6.38% used"
     },
     {
         id: 3,
         tech: <RiJavascriptLine size={24} className="text-yellow-500"/>,
+        name: 'JavaScript',
         used: "3.77% used"
     },
     {
         id: 4,
         tech: <RiTailwindCssLine size={24} className="text-blue-500"/> ,
+        name: 'Tailwind CSS',
         used: "30.45% used"
     },
     {
         id: 5,
         tech: <RiBootstrapLine size={24} className="text-purple-500"/>,
+        name: 'Bootstrap',
         used: "0% used"
     },
     {
         id: 6,
         tech: <RiReactjsFill size={24} className='text-cyan-500'/>,
+        name: 'React',
         used: "3.77% used"
     },
     {
         id: 7,
         tech: <FaPhp size={24} className='text-indigo-500'/>,
+        name: 'PHP',
         used: "31.89% used"
     },
     {
-        id: 7,
+        id: 8,
         tech: <FaGitAlt size={24} className='text-orange-500'/>,
+        name: 'Git',
         used: "48.97% used"
     }
 ]
