@@ -282,7 +282,7 @@ export const items = [
             <PiDeviceTabletSpeakerDuotone size={27}/>,
             <PiDevicesDuotone size={35}/>
         ],
-        project: 'Own project',
+        project: 'Inspiration project',
         link: '',
         code: 'https://github.com/BrandonBlkk/Netflix-clone',
         tech: [

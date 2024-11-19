@@ -137,7 +137,7 @@ const Main = () => {
 
             {/* Cards Display */}
             <motion.div 
-                className="flex justify-center flex-wrap gap-y-2"             
+                className="flex justify-center flex-wrap gap-y-3"             
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}

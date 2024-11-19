@@ -22,7 +22,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className={isScrolled && 'fixed top-3 right-10 z-30 shadow-md rounded-full bg-white dark:bg-sky-950'}>
+        <div className={isScrolled && 'fixed top-3 right-3 sm:right-10 z-30 shadow-md rounded-full bg-white dark:bg-sky-950'}>
             <ul className="flex border rounded-full md:ml-auto dark:border-slate-500">
                 <a
                     href="#"
