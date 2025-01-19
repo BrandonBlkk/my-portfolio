@@ -116,7 +116,7 @@ const Main = () => {
                         Development
                     </motion.p>
                 </div>
-
+                
                 <motion.div 
                     className="flex justify-center select-none"
                     variants={fadeIn} 
