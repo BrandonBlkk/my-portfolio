@@ -129,7 +129,7 @@ const Timeline = () => {
                     />
                     <Modal 
                         id={'my_modal_5'}
-                        img={'Images/Image (74).jfif'}
+                        img={'Images/Image (74).png'}
                     />
                     <hr className='dark:bg-slate-700'/>
                 </li>
