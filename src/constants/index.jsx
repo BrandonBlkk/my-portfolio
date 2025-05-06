@@ -1,5 +1,6 @@
 import { RiBootstrapLine, RiCss3Line, RiHtml5Line, RiJavascriptLine, RiReactjsFill, RiReactjsLine, RiTailwindCssLine } from "react-icons/ri";
 import { FaPhp, FaGitAlt } from "react-icons/fa6";
+import { FaLaravel } from "react-icons/fa";
 import { PiDeviceMobileSpeakerDuotone, PiDeviceTabletSpeakerDuotone, PiDevicesDuotone } from "react-icons/pi";
 
 export const skills = [
@@ -354,6 +355,37 @@ export const items = [
             <RiJavascriptLine size={24} className="text-yellow-500"/>,
             <RiTailwindCssLine size={24} className="text-blue-500"/>,
             <RiReactjsLine size={24} className="text-cyan-500"/>
+        ],
+        category: 'design'
+    },
+    {
+        id: 11,
+        modalID: 'modal_11',
+        img: 'Images/Screenshot 2025-04-25 174658.png',
+        title: "Astrornix Annual University Magazine Website",
+        description: `This project showcases a travel website developed with React JS, HTML, CSS, Tailwind CSS, and JavaScript. 
+        It offers a fully responsive and dynamic user interface, highlighting travel destinations with advanced React skills 
+        for a smooth and engaging experience.`,
+        feature: [
+            'Responsive Layout (if applicable)',
+            'Modern UI Design',
+            'Cross-browser Compatibility'
+        ],
+        responsive: true,
+        device: [
+            <PiDeviceMobileSpeakerDuotone size={22}/>,
+            <PiDeviceTabletSpeakerDuotone size={27}/>,
+            <PiDevicesDuotone size={35}/>
+        ],
+        project: 'Group project',
+        link: '',
+        code: 'https://github.com/BrandonBlkk/My-Travel',
+        tech: [
+            <RiHtml5Line size={24} className='text-orange-500' />,
+            <RiCss3Line size={24} className='text-blue-500' />,
+            <RiJavascriptLine size={24} className="text-yellow-500"/>,
+            <RiTailwindCssLine size={24} className="text-blue-500"/>,
+            <FaLaravel size={24} className="text-red-500"/>
         ],
         category: 'design'
     }
