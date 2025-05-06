@@ -363,9 +363,7 @@ export const items = [
         modalID: 'modal_11',
         img: 'Images/Screenshot 2025-04-25 174658.png',
         title: "Astrornix Annual University Magazine Website",
-        description: `This project showcases a travel website developed with React JS, HTML, CSS, Tailwind CSS, and JavaScript. 
-        It offers a fully responsive and dynamic user interface, highlighting travel destinations with advanced React skills 
-        for a smooth and engaging experience.`,
+        description: `This project is a group project to build a web-based secure role-based system for collecting student contributions for an annual university magazine in a large university.`,
         feature: [
             'Responsive Layout (if applicable)',
             'Modern UI Design',
@@ -377,9 +375,9 @@ export const items = [
             <PiDeviceTabletSpeakerDuotone size={27}/>,
             <PiDevicesDuotone size={35}/>
         ],
-        project: 'Group project',
+        project: 'Final year project',
         link: '',
-        code: 'https://github.com/BrandonBlkk/My-Travel',
+        code: 'https://github.com/HtutMyatLinn/astrornixuni',
         tech: [
             <RiHtml5Line size={24} className='text-orange-500' />,
             <RiCss3Line size={24} className='text-blue-500' />,
@@ -387,6 +385,6 @@ export const items = [
             <RiTailwindCssLine size={24} className="text-blue-500"/>,
             <FaLaravel size={24} className="text-red-500"/>
         ],
-        category: 'design'
+        category: 'dev'
     }
 ]
