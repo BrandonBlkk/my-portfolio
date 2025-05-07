@@ -48,6 +48,12 @@ export const skills = [
     },
     {
         id: 8,
+        tech: <FaLaravel size={24} className='text-red-500'/>,
+        name: 'Laravel',
+        used: "78.03% used"
+    },
+    {
+        id: 9,
         tech: <FaGitAlt size={24} className='text-orange-500'/>,
         name: 'Git',
         used: "48.97% used"
