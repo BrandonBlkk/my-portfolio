@@ -14,7 +14,7 @@ const Hero = () => {
         setYearExp(currentYear - startYear);
     });
 
-    const text = "As a junior frontend developer, I craft intuitive interfaces, optimize user experiences, and innovate with code to bring designs to life.";
+    const text = "As a junior web developer, I craft intuitive interfaces, optimize user experiences, and innovate with code to bring designs to life.";
     const words = text.split(" "); 
     
     // Variants for animation
@@ -93,7 +93,7 @@ const Hero = () => {
                             variants={flipEffect}
                         >
                             Hi, I'm Brandon{" "}
-                            <span className="skills text-blue-400">Frontend Developer</span>
+                            <span className="skills text-blue-400">Web Developer</span>
                         </motion.h2>
                         <h4 className="text-base my-6 sm:text-xl">
                             {words.map((word, index) => (
