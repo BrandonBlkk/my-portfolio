@@ -6,11 +6,22 @@ module.exports = {
   ],
   theme: {
     extend: {
-      themes: ["light"],
+      keyframes: {
+        shine: {
+          '0%': { 'background-position': '100%' },
+          '100%': { 'background-position': '-100%' },
+        },
+      },
+      animation: {
+        shine: 'shine 5s linear infinite',
+      },
     },
   },
   plugins: [
     require('daisyui'),
     require('tailwind-scrollbar'),
   ],
+  daisyui: {
+    themes: ["light"],
+  },
 }

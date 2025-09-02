@@ -4,10 +4,11 @@ import { RiAtLine, RiMapPinUserFill } from "react-icons/ri";
 import { CgDarkMode } from "react-icons/cg";
 import { motion } from 'framer-motion';
 import { PiMouseScrollThin } from 'react-icons/pi';
+import ShinyText from './ShinyText';
 
 const Header = () => {
     const [age, setAge] = useState(0);
-    const [isMoon, setIsMoon] = useState(false);
+    const [isMoon, setIsMoon] = useState(true);
     const [scrollY, setScrollY] = useState(0);
 
     // Calculate age on mount
@@ -75,17 +76,34 @@ const Header = () => {
     return (
         <>
             {/* Header Section */}
-            <nav className="flex flex-col md:flex-row items-center justify-between gap-4 container mx-auto px-10 my-10 transition-colors duration-150">
+            <nav className="flex flex-col md:flex-row items-center justify-between gap-4 container mx-auto px-10 my-10 transition-colors duration-150 z-10">
                 <div className='flex flex-col sm:flex-row items-center gap-5'>
                     <div className="w-40 select-none">
                         <img className='w-full h-full object-cover rounded-full' src={'Images/Profile.png'} alt="Profile of Kyaw Zayar Tun" />
                     </div>
                     <div>
-                        <div className="flex gap-2">
-                            <p className="text-slate-500 flex items-center gap-1"> <RiAtLine /> Kyaw Zayar Tun</p>
-                            <p className="text-slate-500">{age} y/o</p>
+                       <div className='flex items-center gap-1'>
+                            <RiAtLine  
+                                className='text-black dark:text-[#c5c3c3a4]'
+                            />
+                            <ShinyText
+                                text={`Kyaw Zayar Tun ${age} y/o`} 
+                                disabled={false} 
+                                speed={3} 
+                                className='custom-class' 
+                            />
                         </div>
-                        <p className="text-slate-500 flex items-center gap-1"><RiMapPinUserFill /> Yangon</p>
+                        <div className='flex items-center gap-1'>
+                            <RiMapPinUserFill  
+                                className='text-black dark:text-[#c5c3c3a4]'
+                            />
+                            <ShinyText
+                                text={"Yangon, Myanmar"} 
+                                disabled={false} 
+                                speed={3} 
+                                className='custom-class' 
+                            />
+                        </div>
                     </div>
 
                     {/* Dark Mode Toggle */}

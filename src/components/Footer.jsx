@@ -30,7 +30,7 @@ const Footer = () => {
                         viewport={{ once: true, amount: 0.1 }}
                     >
                         <motion.h2
-                            className="text-gray-300 text-4xl sm:text-5xl"
+                            className="text-gray-300 text-4xl sm:text-5xl font-thin"
                             variants={slideIn}
                             transition={{ duration: 0.5, ease: "easeOut" }}
                         >

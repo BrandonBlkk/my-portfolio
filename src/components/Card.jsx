@@ -4,7 +4,7 @@ import ViewDetails from './ViewDetails';
 
 const Card = ({ modalID, img, title, description, feature, responsive, device, project, link, code, tech }) => {
     return (
-        <div className="hot-deal-box w-full px-3 relative sm:w-80 group">
+        <div className="hot-deal-box w-full px-1 relative sm:w-[30rem] group">
             <div className="relative overflow-hidden group">
                 <div className="hot-deal-img-container flex justify-center rounded-sm select-none border dark:border-none group-hover:scale-105 transition-all duration-300">
                     <img className="w-full h-full object-contain rounded-sm" src={img} alt={title} />
@@ -24,7 +24,7 @@ const Card = ({ modalID, img, title, description, feature, responsive, device, p
                 </div>
             </div>
             <div className="hot-deal-info mt-3">
-                <h1 className="font-bold">{title} {responsive ? '' : '(Not Fully Responsive)'}</h1>
+                <h1 className="font-semibold ">{title} {responsive ? '' : '(Not Fully Responsive)'}</h1>
                 <p className="text-sky-700 font-bold text-sm">{project}</p>
             </div>
             <div className="mt-3 border-b-2 border-slate-200 dark:border-sky-950 md:border-b-0">

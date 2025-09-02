@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Card from './Card';
 import { items } from '../constants';
 import { RiArrowUpWideLine } from 'react-icons/ri'; 
+ import InfiniteScroll from './InfiniteScroll';
 
 const Main = () => {
     const [activeTab, setActiveTab] = useState('all');
@@ -70,7 +71,7 @@ const Main = () => {
     return (
         <motion.div 
             id='work' 
-            className="container mx-auto my-10" 
+            className="container mx-auto my-10 px-5" 
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}>
@@ -80,7 +81,7 @@ const Main = () => {
                 transition={{ duration: 0.5, ease: "easeOut", delay: 0 }}
                 viewport={{amount: 0.2}}
             >
-                <h2 className="text-4xl sm:text-5xl">The work I do</h2>
+                <h2 className="text-4xl sm:text-5xl font-thin">The work I do</h2>
             </motion.div>
 
             <div className="flex flex-col gap-5 justify-between items-center mx-5 my-5 sm:flex-row">
@@ -136,12 +137,11 @@ const Main = () => {
             </div>
 
             {/* Cards Display */}
-            <motion.div 
+            {/* <motion.div 
                 className="flex justify-center flex-wrap gap-y-3"             
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                
             >
                 {currentItems.map(item => (
                     <motion.div
@@ -167,7 +167,19 @@ const Main = () => {
                         />
                     </motion.div>
                 ))}
-            </motion.div>
+            </motion.div> */}
+  
+            <div style={{height: '500px', position: 'relative'}}>
+                <InfiniteScroll
+                    items={items}
+                    isTilted={true}
+                    tiltDirection='left'
+                    autoplay={true}
+                    autoplaySpeed={0.4}
+                    autoplayDirection="up"
+                    pauseOnHover={true}
+                />
+            </div>
 
             <motion.a 
                 href="#" 
